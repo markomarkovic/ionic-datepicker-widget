@@ -2,7 +2,7 @@
  * Created by Rajeshwar Patlolla https://github.com/rajeshwarpatlolla
  * Modified by Marko Marković <okram@civokram.com>
  *
- * @version 1.1.1
+ * @version 1.1.2
  */
 'use strict';
 angular.module('ionic-datepicker', ['ionic', 'ionic-datepicker.template'])
@@ -50,7 +50,11 @@ angular.module('ionic-datepicker', ['ionic', 'ionic-datepicker.template'])
 				// Offset the first of the month to match the week day
 				firstDay = scope.dayList[0].date.getDay();
 				if (scope.weekBeginsOnMonday || false) {
-					firstDay--;
+					if (firstDay > 1) {
+						firstDay--;
+					} else {
+						firstDay = 6;
+					}
 				}
 				for (var j = 0; j < firstDay; j++) {
 					scope.dayList.unshift(undefined);
