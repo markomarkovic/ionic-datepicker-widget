@@ -1,7 +1,7 @@
 # Ionic Datepicker Widget
 _A nice datepicker widget to be used with Ionic framework._
 
-## [Demo](http://cdn.rawgit.com/markomarkovic/ionic-datepicker-widget/1.1.1/demo/index.html)
+## [Demo](http://cdn.rawgit.com/markomarkovic/ionic-datepicker-widget/1.1.2/demo/index.html)
 
 ## Requirements
 
@@ -49,6 +49,8 @@ $scope.item = {
 
 ## Changelog
 
+ 1. v1.1.2
+   * Fix wrong days when weekBeginsOnMonday and firstDay is 1
  1. v1.1.1
    * Fix today button behavior when min or max is today
  1. v1.1.0
